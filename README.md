@@ -1,6 +1,4 @@
-# Awesome Blockchain
-
-[![Awesome](https://awesome.re/badge.svg)](https://github.com/yjjnls/awesome-blockchain)
+# Handsome Blockchain
 
 > Curated list of resources for the development and applications of block chain.
 
@@ -8,77 +6,12 @@ The blockchain is an incorruptible digital ledger of economic transactions that 
 
 <font color=#0099ff size=3>**This is not a simple collection of Internet resources, but verified and organized data ensuring it's really suitable for your learning process and useful for your development and application.**</font>
 
-## Contents
-<details><summary>Click to expand</summary>
-
-- [Awesome Blockchain](#awesome-blockchain)
-  - [Contents](#contents)
-  - [Frequently Asked Questions (F.A.Q.s) & Answers](#frequently-asked-questions-faqs--answers)
-  - [Basic Introduction](#basic-introduction)
-  - [Development Tutorial](#development-tutorial)
-    - [BitCoin](#bitcoin)
-    - [Ethereum](#ethereum)
-    - [Consortium Blockchain](#consortium-blockchain)
-      - [Hyperledger](#hyperledger)
-      - [XuperChain](#xuperchain)
-      - [FISCO-BCOS](#fisco-bcos)
-  - [Releated Tools](#releated-tools)
-    - [Solidity](#solidity)
-    - [truffle](#truffle)
-    - [web3.js](#web3js)
-  - [Implementation of Blockchain](#implementation-of-blockchain)
-  - [Projects and Applications](#projects-and-applications)
-    - [Quorum](#quorum)
-    - [Monero](#monero)
-    - [IOTA](#iota)
-    - [EOS](#eos)
-    - [IPFS](#ipfs)
-      - [Filecoin](#filecoin)
-      - [BigchainDB](#bigchaindb)
-    - [BitShares](#bitshares)
-    - [ArcBlock](#arcblock)
-  - [Further Extension](#further-extension)
-    - [Papers](#papers)
-    - [Books](#books)
-    - [Applications](#applications)
-      - [Identity Applications](#identity-applications)
-        - [Public Blockchain Identity](#public-blockchain-identity)
-        - [Blockchain as a collateral](#blockchain-as-a-collateral)
-        - [Unclear](#unclear)
-        - [Guidance](#guidance)
-      - [Internet of Things Applications](#internet-of-things-applications)
-      - [Energy Applications](#energy-applications)
-      - [Media and Journalism](#media-and-journalism)
-      - [DeFi (Decentralised Finance)](#defi-decentralised-finance)
-    - [Roadmaps](#roadmaps)
-  - [Contribute](#contribute)
-
-</details>
-
 ## Frequently Asked Questions (F.A.Q.s) & Answers
 
 **Q: What's a Blockchain?**
 
 A: A blockchain is a distributed database with a list (that is, chain) of records (that is, blocks) linked and secured by
 digital fingerprints (that is, crypto hashes).
-Example from [`genesis_block.json`](https://github.com/yjjnls/awesome-blockchain/tree/master/src/js/genesis_block.json):
-
-```js
-{
-    "version": 0,
-    "height": 1,
-    "previous_hash": null,
-    "timestamp": 1550049140488,
-    "merkle_hash": null,
-    "generator_publickey": "18941c80a77f2150107cdde99486ba672b5279ddd469eeefed308540fbd46983",
-    "hash": "d611edb9fd86ee234cdc08d9bf382330d6ccc721cd5e59cf2a01b0a2a8decfff",
-    "block_signature": "603b61b14348fb7eb087fe3267e28abacadf3932f0e33958fb016ab60f825e3124bfe6c7198d38f8c91b0a3b1f928919190680e44fbe7289a4202039ffbb2109",
-    "consensus_data": {},
-    "transactions": []
-}
-```
-
-![](Basic/img/blockchain-jesus.png)
 
 **Q: What's a Hash? What's a (One-Way) Crypto(graphic) Hash Digest Checksum**?
 
@@ -125,293 +58,6 @@ The "classic" Satoshi-blockchain is like a git repo with a single master branch 
 - [10 Essential Blockchain Interview Questions](https://www.toptal.com/blockchain/interview-questions)
 - [Top 36 Blockchain Job Interview Questions & Answers](https://blockchainsfactory.com/blockchain-interview-questions/)
 
----
-## Basic Introduction
-
-<!--    
-### Encryption knowledge
-   -->
-
--   **Encryption knowledge**  
-    * [Basic concepts](https://www.jianshu.com/p/a044b303f7d5) - Asymmetric encryption, Digital signature, Certificate  
-    * [Digital signature extension](https://www.jianshu.com/p/410e77ec23fa)  - Multi-signature, Blind signature, Group signature, Ring signature
-    * [Merkle tree](https://www.jianshu.com/p/a044b303f7d5)  
-    <!-- * [Merkle tree in blockchain](./Basic/merkle_tree_in_blockchain.md)   -->
-    * [Merkle DAG](http://www.sohu.com/a/247540268_100222281)   
-    * [**CryptoNote v2.0**](https://cryptonote.org/whitepaper.pdf) - Untraceable Transactions and Egalitarian Proof-of-work
-<!--   
-### Consensus
-    -->
--   **Consensus**  
-    * [Proof of Work](https://www.jianshu.com/p/3462f2ed74d7)
-    * [Proof of Stake](https://www.jianshu.com/p/2fd3bce523b0)
-    * [Proof of Stake FAQs](https://github.com/ethereum/wiki/wiki/Proof-of-Stake-FAQs) / [Chinese version](https://ethfans.org/posts/Proof-of-Stake-FAQ-new-2018-3-15)
-    * [Delegated Proof of Stake](https://www.jianshu.com/p/ccc3fff7a60d)
-    * [Practical Byzantine Fault Tolerance](https://www.jianshu.com/p/e991c1385f9f)
-
-<!--    
-### Account and transaction model
-    -->
--   **Account and transaction model**  
-    * [UTXO model](https://www.jianshu.com/p/2f4e75dbc2e4)
-<!--
-### Exchange
-    -->
--   **Exchange**  
-<!--
-### Applications
-    -->
--   **Applications**  
-    * [Do You Need a Blockchain?](https://spectrum.ieee.org/computing/networks/do-you-need-a-blockchain)  
-    * [What can't blockchain do?](https://www.jianshu.com/p/70f6a29a6296)  
-    * [More](./Extension/application.md)
-<!--     
-### Governance
-    -->
--   **Governance**
-    * [Blockchains should not be democracies](https://haseebq.com/blockchains-should-not-be-democracies/)                                       
-<!-- * [](https://github.com/yfeng125/blockchain-tutorial/blob/master/doc/%E2%80%8B25.%E6%AF%94%E7%89%B9%E5%B8%81%EF%BC%9A%E6%89%A9%E5%AE%B9%E4%B9%8B%E4%BA%89%E3%80%81IFO%E4%B8%8E%E9%93%BE%E4%B8%8A%E6%B2%BB%E7%90%86.md)   -->
-
-
-<!--     
-### Digital currency ranking
-    -->
--   **[Digital currency ranking](https://coinmarketcap.com/)**   
-
----
-## Development Tutorial
-
-### [BitCoin](https://github.com/bitcoin/bitcoin)
-
-[<img src="https://bitcoin.org/img/icons/logotop.svg" align="right" width="120">](https://bitcoincore.org)
-
-**Bitcoin** is an experimental digital currency that enables instant payments to anyone, anywhere in the world. Bitcoin uses **peer-to-peer** technology to **operate with no central authority**: managing transactions and issuing money are carried out collectively by the network.
-
--   [BitCoin white paper: A Peer-to-Peer Electronic Cash System](https://bitcoin.org/bitcoin.pdf) / [Chinese version](BitCoin/white%20paper.md) / [Annotated BitCoin white paper](https://fermatslibrary.com/s/bitcoin)
--   [Mastering BitCoin](https://github.com/bitcoinbook/bitcoinbook) / [Chinese version](http://book.8btc.com/books/6/masterbitcoin2cn/_book/) / [pdf download](http://book.8btc.com/master_bitcoin?export=pdf)
--   [Bitcoin Improvement Proposals (BIPs)](https://github.com/bitcoin/bips/)
-
-+   [But how does bitcoin actually work?](https://www.youtube.com/watch?v=bBC-nXj3Ng4)
-+   [Mining visualization](http://www.yogh.io/#mine:last)
-+   [Wallets](./BitCoin/awesome.md#wallets-api)
-+   [Explorers](./BitCoin/awesome.md#blockchain-explorers)
-+   [Libraries](./BitCoin/awesome.md#libraries) - C++, JavaScript, PHP, Ruby, Python, Java, .Net
-+   [Web services](./BitCoin/awesome.md#blockchain-api-and-web-services)
-+   [Full nodes](./BitCoin/awesome.md#full-nodes)
-+   [More](./BitCoin/awesome.md)
-
-### [Ethereum](https://github.com/ethereum)
-
-[<img src="https://github.com/yjjnls/Notes/blob/master/img/ethereum.png" align="right" width="80">](https://www.ethereum.org/)
-
-**Ethereum** is a **decentralized platform that runs smart contracts**: applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third-party interference.
-
-These apps run on a custom built **blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property.**
-
-
--   [Ethereum white paper](https://github.com/ethereum/wiki/wiki/White-Paper) / [Chinese version](./Ethereum/white%20paper.md) / [Annotated Ethereum white paper](https://fermatslibrary.com/s/ethereum-a-next-generation-smart-contract-and-decentralized-application-platform)
--   [Mastering Ethereum](https://github.com/ethereumbook/ethereumbook) / [Chinese version](https://github.com/inoutcode/ethereum_book)
--   [Ethereum Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) / [Chinese version](https://github.com/yuange1024/ethereum_yellowpaper)
--   [Ethereum wiki](https://github.com/ethereum/wiki/wiki)
-    -   [Ethereum Design Rationale](https://github.com/ethereum/wiki/wiki/Design-Rationale) / [Chinese version](https://ethfans.org/posts/510)
-    -   [Ethereum problems](https://github.com/ethereum/wiki/wiki/Problems)
-    -   [Sharding roadmap](https://github.com/ethereum/wiki/wiki/Sharding-roadmap)
-    -   [**Ethereum flavored WebAssembly (ewasm)**](https://github.com/ewasm)
-    -   [ÐΞVp2p Wire Protocol](https://github.com/ethereum/wiki/wiki/%C3%90%CE%9EVp2p-Wire-Protocol)
-    -   [EVM-Awesome-List](https://github.com/ethereum/wiki/wiki/Ethereum-Virtual-Machine-(EVM)-Awesome-List)
-    -   [Patricia Tree](https://github.com/ethereum/wiki/wiki/Patricia-Tree)
-    -   Consensus
-        -   [Ethash](https://github.com/ethereum/wiki/wiki/Ethash)
-        -   [Ethash-DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG)
-        -   [Ethash Specification](https://github.com/ethereum/wiki/wiki/Ethash)
-        -   [Mining Ethash DAG](https://github.com/ethereum/wiki/wiki/Mining#ethash-dag)
-        -   [Dagger-Hashimoto Algorithm](https://github.com/ethereum/wiki/blob/master/Dagger-Hashimoto.md)
-        -   [DAG Explanation and Images](https://ethereum.stackexchange.com/questions/1993/what-actually-is-a-dag)
-        -   [Ethash in Ethereum Yellowpaper](https://ethereum.github.io/yellowpaper/paper.pdf#appendix.J)
-        -   [Ethash C API Example Usage](https://github.com/ethereum/wiki/wiki/Ethash-C-API)
--   [Accounts, Transactions, Gas, and Block Gas Limits in Ethereum](https://hudsonjameson.com/2017-06-27-accounts-transactions-gas-ethereum/)
--   [Ethereum Improvement Proposals](https://eips.ethereum.org/)
--   [Important EIPs and ERCs](https://github.com/ethereumbook/ethereumbook/blob/develop/appdx-standards-eip-erc.asciidoc#table-of-most-important-eips-and-ercs) / [EIP list](https://github.com/ethereum/EIPs)
--   Security
-    -   [Ethereum Smart Contract Security Best Practices](https://consensys.github.io/smart-contract-best-practices/) / [Chinese version](https://github.com/ConsenSys/smart-contract-best-practices/blob/master/README-zh.md)
-    -   [Onward with Ethereum Smart Contract Security](https://blog.zeppelin.solutions/onward-with-ethereum-smart-contract-security-97a827e47702)
-    -   [The Hitchhiker's Guide to Smart Contracts in Ethereum](https://blog.zeppelin.solutions/the-hitchhikers-guide-to-smart-contracts-in-ethereum-848f08001f05)
-    -   [**OpenZeppelin**](https://docs.openzeppelin.com/openzeppelin/)
-    -   [**openzeppelin contracts**](https://github.com/OpenZeppelin/openzeppelin-contracts) / [doc](https://docs.openzeppelin.com/contracts/2.x/)
-    -   [openzepplin sdk](https://github.com/OpenZeppelin/openzeppelin-sdk)
--   Token
-    -   [ERC20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) / [impl](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20)
-    -   [ERC721](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md) / [impl](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC721)
-
-+   Utils
-    +   [Ethereum Blockchain Explorer](https://etherscan.io/)
-    +   [Eth Gas Station](https://ethgasstation.info/)
-    +   [Eth Network Status](https://ethstats.net/)
-    
-
--   [**EEA** - Enterprise Ethereum: Private Blockchain For Enterprises](https://101blockchains.com/enterprise-ethereum/)
-    -   [What Is Enterprise Ethereum?](https://101blockchains.com/enterprise-ethereum/#1)
-    -   [What is The Enterprise Ethereum alliance?](https://101blockchains.com/enterprise-ethereum/#2)
-    -   [Benefits of Enterprise Ethereum](https://101blockchains.com/enterprise-ethereum/#3)
-    -   [Architecture Stack of the Enterprise Ethereum Blockchain](https://101blockchains.com/enterprise-ethereum/#4)
-    -   [What Are The Possible Enterprise Ethereum Use Cases?](https://101blockchains.com/enterprise-ethereum/#5)
-    -   [Ethereum Blockchain as a Service Providers](https://101blockchains.com/enterprise-ethereum/#6)
-    -   [Real-World Companies Using Enterprise Ethereum](https://101blockchains.com/enterprise-ethereum/#7)
-    -   [Final Words](https://101blockchains.com/enterprise-ethereum/#8)
-
-### Consortium Blockchain
-*   **Theory**
-    -   [**The Byzantine Generals Problem**](https://people.eecs.berkeley.edu/~luca/cs174/byzantine.pdf)
-    -   [**Practical Byzantine Fault Tolerance**](http://pmg.csail.mit.edu/papers/osdi99.pdf)
-    -   [Is consortium blockchain better?](http://www.infoq.com/cn/news/2018/10/is-consortium-blockchain-better)   
-    -   [5 consortium blockchain comparison](http://www.infoq.com/cn/articles/5-consortium-blockchain-comparison) / [quick version](https://upload-images.jianshu.io/upload_images/11336404-f753396df0e930c8.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)    
-    -   [FISCO BCOS vs Fabric](http://www.infoq.com/cn/news/2018/09/uncover-consortium-blockchain)   
-
-*   **Implement a consortium blockchain using ethereum**  
-    -   [Building a Private Ethereum Consortium](https://www.microsoft.com/developerblog/2018/06/01/creating-private-ethereum-consortium-kubernetes/)
-    -   [Deploying a private Ethereum blockchain to Microsoft Azure Cloud](https://www.youtube.com/watch?v=HsConsFaZG8)
-    -   [Ethereum Consortium Network Deployments Made Easy](https://github.com/CatalystCode/ibera-ethereum-consortium-blockchain-network)
-    -   [How to Set Up a Private Ethereum Blockchain in 20 Minutes](https://arctouch.com/blog/how-to-set-up-ethereum-blockchain/)
-
-
-#### Hyperledger
-
-[<img src="https://www.hyperledger.org/wp-content/uploads/2018/03/Hyperledger_Fabric_Logo_Color.png" align="right" width="120">](https://www.hyperledger.org/projects/fabric)
-
--   [Hyperledger Org](https://wiki.hyperledger.org/)
--   Fabric
-    -   [Fabric Org](https://wiki.hyperledger.org/display/Fabric)
-    -   [Fabric Design Documents](https://wiki.hyperledger.org/display/fabric/Design+Documents)
-    -   [Fabric Wiki](https://hyperledger-fabric.readthedocs.io/en/latest/)
-        -   1.4 [En](https://hyperledger-fabric.readthedocs.io/en/release-1.4/) / [Zn](https://hyperledger-fabric.readthedocs.io/zh_CN/release-1.4/) / [Release](https://hyperledger-fabric.readthedocs.io/_/downloads/en/release-1.4/pdf/)
-        -   2.2 [En](https://hyperledger-fabric.readthedocs.io/en/release-2.2/) / [Zn](https://hyperledger-fabric.readthedocs.io/zh_CN/release-2.2/)
-    -   [Fabric Source Code Analyse](https://yeasy.gitbook.io/hyperledger_code_fabric/overview)
-    -   [A Kafka-based Ordering Service for Fabric](https://docs.google.com/document/d/19JihmW-8blTzN99lAubOfseLUZqdrB6sBR0HsRgCAnY/edit)
-
--   Explorer
-    -   [Explorer Proposal](https://docs.google.com/document/d/1GuVNHZ5Jqq-gTVKflnZ1YiJfEoozvugqenC6QEQFQj4/edit)
-    -   [Explorer doc](https://blockchain-explorer.readthedocs.io/en/master/architecture/index.html)
-
--   [IBM OpenTech Hyperledger Fabric 1.4 LTS Course](https://space.bilibili.com/102734951/channel/detail?cid=69148)
--   [edx: Introduction to Hyperledger Blockchain Technologies Free Course](https://www.edx.org/course/introduction-to-hyperledger-blockchain-technologie)
-
-
-#### [XuperChain](https://github.com/xuperchain/xuperchain)
-[<img src="https://avatars3.githubusercontent.com/u/43258643?s=200&v=4" align="right" width="80">](https://xchain.baidu.com/)
-
-**XuperChain**, the first open source project of XuperChain Lab, introduces a highly flexible blockchain architecture with great transaction performance.
-
-**XuperChain** is the underlying solution for union networks with following highlight features:
-
-**High Performance**
-*   Creative XuperModel technology makes contract execution and verification run parallelly.
-*   [TDPoS](https://xuperchain.readthedocs.io/zh/latest/design_documents/xpos.html) ensures quick consensus in a large scale network.
-*   WASM VM using AOT technology.
-
-**Solid Security**
-*   Contract account protected by multiple private keys ensures assets safety.
-*   [Flexible authorization system](https://xuperchain.readthedocs.io/zh/latest/design_documents/permission_model.html) supports weight threshold, AK sets and could be easily extended.
-
-**High Scalability**
-*   Robust [P2P](https://xuperchain.readthedocs.io/zh/latest/design_documents/p2p.html) network supports a large scale network with thousands of nodes.
-*   Branch management on ledger makes automatic convergence consistency and supports global deployment.
-
-**Multi-Language Support**: Support pluggable multi-language contract VM using [XuperBridge](https://xuperchain.readthedocs.io/zh/latest/design_documents/XuperBridge.html) technology.
-
-**Flexibility**: Modular and pluggable design provides high flexibility for users to build their blockchain solutions for various business scenarios.
-
--   [Baidu Blockchain Engine](https://cloud.baidu.com/product/bbe.html)
--   [Homepage](https://xchain.baidu.com/)
--   [Doc](https://xuperchain.readthedocs.io/zh/latest/index.html)
--   [Wiki](https://github.com/xuperchain/xuperchain/wiki) / [English version](https://github.com/xuperchain/xuperchain/wiki/Wiki-in-English)
-
-+   [Getting start](https://github.com/xuperchain/xuperchain/wiki/3.-Getting-Started)
-    +   [Account operation](https://xuperchain.readthedocs.io/zh/latest/advanced_usage/contract_accounts.html)
-    +   [Multiple nodes deployment](https://xuperchain.readthedocs.io/zh/latest/advanced_usage/multi-nodes.html)
-    +   [Wasm contract](https://xuperchain.readthedocs.io/zh/latest/advanced_usage/create_contracts.html)
-    +   [Proposal](https://xuperchain.readthedocs.io/zh/latest/advanced_usage/initiate_proposals.html)
-    +   [Parallel chain](https://xuperchain.readthedocs.io/zh/latest/advanced_usage/parallel_chain.html)
-+   SDK
-    +   [Go SDK](https://github.com/xuperchain/xuper-java-sdk)
-    +   [Javascript SDK](https://github.com/xuperchain/xuper-sdk-js)
-    +   [Java SDK](https://github.com/xuperchain/xuper-python-sdk)
-    +   [Python SDK](https://github.com/xuperchain/xuper-python-sdk)
-+   [Detailed FAQs](https://xuperchain.readthedocs.io/zh/latest/FAQs.html)
-+   [Comparation with Fabric and Ethereum](https://github.com/xuperchain/xuperchain/wiki/%E9%99%84-%E8%AF%84%E6%B5%8B%E6%95%B0%E6%8D%AE%E5%AF%B9%E6%AF%94)
-
-#### [FISCO-BCOS](https://github.com/FISCO-BCOS/Wiki)
-
-## Releated Tools
-
-### Solidity
--   [doc](https://solidity.readthedocs.io/en/develop/index.html) / [Chinese version](https://solidity-cn.readthedocs.io/zh/develop/)
-
-### truffle
--   [BlockChain KickStarter From Scratch](https://prasannabrabourame.medium.com/blockchain-kickstarter-from-scratch-9a3906596cd0)
-
-### web3.js
--   [doc](https://web3js.readthedocs.io/en/1.0/) / [Chinese version](http://web3.tryblockchain.org/Web3.js-api-refrence.html)
-
-## Implementation of Blockchain
--   [**ATS**: _Functional Blockchain_](https://beta.observablehq.com/@galletti94/functional-blockchain)
--   [**C#**: _Programming The Blockchain in C#_](https://programmingblockchain.gitbooks.io/programmingblockchain/)
--   [**Crystal**: _Write your own blockchain and PoW algorithm using Crystal_](https://medium.com/@bradford_hamilton/write-your-own-blockchain-and-pow-algorithm-using-crystal-d53d5d9d0c52)
--   [**C++**: _Blockchain from Scratch_](https://github.com/openblockchains/awesome-blockchains/tree/master/blockchain.cpp)
--   [**Go: _Building Blockchain in Go_**](https://github.com/Jeiwan/blockchain_go) / [Chinese version 1](https://github.com/liuchengxu/blockchain-tutorial/blob/master/content/part-1/basic-prototype.md) / [Chinese version 2](https://zhangli1.gitbooks.io/dummies-for-blockchain/content/)
-    -   [_Part 1: Basic Prototype_](https://jeiwan.net/posts/building-blockchain-in-go-part-1/)
-    -   [_Part 2: Proof-of-Work_](https://jeiwan.net/posts/building-blockchain-in-go-part-2/)
-    -   [_Part 3: Persistence and CLI_](https://jeiwan.net/posts/building-blockchain-in-go-part-3/)
-    -   [_Part 4: Transactions 1_](https://jeiwan.net/posts/building-blockchain-in-go-part-4/)
-    -   [_Part 5: Addresses_](https://jeiwan.net/posts/building-blockchain-in-go-part-5/)
-    -   [_Part 6: Transactions 2_](https://jeiwan.net/posts/building-blockchain-in-go-part-6/)
-    -   [_Part 7: Network_](https://jeiwan.net/posts/building-blockchain-in-go-part-7/)
--   [**Go**: _Building A Simple Blockchain with Go_](https://www.codementor.io/codehakase/building-a-simple-blockchain-with-go-k7crur06v)
--   [**Go**: _Code your own blockchain in less than 200 lines of Go_](https://medium.com/@mycoralhealth/code-your-own-blockchain-in-less-than-200-lines-of-go-e296282bcffc)
--   [**Go**: _Code your own blockchain mining algorithm in Go_](https://medium.com/@mycoralhealth/code-your-own-blockchain-mining-algorithm-in-go-82c6a71aba1f)
--   [**Go**: _GoCoin - A full Bitcoin solution written in Go language (golang)_](https://github.com/piotrnar/gocoin)
--   [**Go**: _GoChain - A basic implementation of blockchain in go_](https://github.com/crisadamo/gochain)
--   [**Go**: _Having fun implementing a blockchain using Golang_](https://github.com/izqui/blockchain)
--   [**Go**: _NaiveChain - A naive and simple implementation of blockchains_](https://github.com/kofj/naivechain)
--   [**Java**: _Creating Your First Blockchain with Java_](https://medium.com/programmers-blockchain/create-simple-blockchain-java-tutorial-from-scratch-6eeed3cb03fa)
--   [**Java**: _Write a blockchain with java_](https://www.jianshu.com/p/afd8c465c91a)
--   [**JavaScript**: _A cryptocurrency implementation in less than 1500 lines of code_](https://github.com/conradoqg/naivecoin)
--   [**JavaScript**: _A web-based demonstration of blockchain concepts_](https://github.com/anders94/blockchain-demo/)
--   [**JavaScript**: _Build your own Blockchain in JavaScript_](https://github.com/nambrot/blockchain-in-js)
--   [**JavaScript**: _Code for Blockchain Demo_](https://github.com/seanjameshan/blockchain)
--   [**JavaScript**: _Creating a blockchain with JavaScript_](https://github.com/SavjeeTutorials/SavjeeCoin)
--   [**JavaScript**: _How To Launch Your Own Production-Ready Cryptocurrency_](https://hackernoon.com/how-to-launch-your-own-production-ready-cryptocurrency-ab97cb773371)
--   [**JavaScript**: _Learn & Build a JavaScript Blockchain_](https://medium.com/digital-alchemy-holdings/learn-build-a-javascript-blockchain-part-1-ca61c285821e)
--   [**JavaScript**: _Node.js Blockchain Imlementation: BrewChain: Chain+WebSockets+HTTP Server_](http://www.darrenbeck.co.uk/blockchain/nodejs/nodejscrypto/)
--   [**JavaScript**: _Writing a tiny blockchain in JavaScript_](https://www.savjee.be/2017/07/Writing-tiny-blockchain-in-JavaScript/)
-    -   [_Part 1: Implementing a basic blockchain_](https://www.savjee.be/2017/07/Writing-tiny-blockchain-in-JavaScript/)
-    -   [_Part 2: Implementing proof-of-work_](https://www.savjee.be/2017/09/Implementing-proof-of-work-javascript-blockchain/)
-    -   [_Part 3: Transactions & mining rewards_](https://www.savjee.be/2018/02/Transactions-and-mining-rewards/)
-    -   [_Part 4: Signing transactions_](https://www.savjee.be/2018/10/Signing-transactions-blockchain-javascript/)
--   [**Kotlin**: _Let’s implement a cryptocurrency in Kotlin_](https://medium.com/@vasilyf/lets-implement-a-cryptocurrency-in-kotlin-part-1-blockchain-8704069f8580)
--   [**Python**: _A Practical Introduction to Blockchain with Python_](http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/)
--   [**Python**: _Build your own blockchain: a Python tutorial_](http://ecomunsing.com/build-your-own-blockchain)
--   [**Python**: _Learn Blockchains by Building One_](https://hackernoon.com/learn-blockchains-by-building-one-117428612f46)
--   [**Python**: _Let’s Build the Tiniest Blockchain_](https://medium.com/crypto-currently/lets-build-the-tiniest-blockchain-e70965a248b)
--   [**Python: _write-your-own-blockchain_**](https://bigishdata.com/2017/10/17/write-your-own-blockchain-part-1-creating-storing-syncing-displaying-mining-and-proving-work/)
-    -   [_Part 1 — Creating, Storing, Syncing, Displaying, Mining, and Proving Work_](https://bigishdata.com/2017/10/17/write-your-own-blockchain-part-1-creating-storing-syncing-displaying-mining-and-proving-work/)
-    -   [_Part 2 — Syncing Chains From Different Nodes_](https://bigishdata.com/2017/10/27/build-your-own-blockchain-part-2-syncing-chains-from-different-nodes/)
-    -   [_Part 3 — Nodes that Mine_](https://bigishdata.com/2017/11/02/build-your-own-blockchain-part-3-writing-nodes-that-mine/)
-    -   [_Part 4.1 — Bitcoin Proof of Work Difficulty Explained_](https://bigishdata.com/2017/11/13/how-to-build-a-blockchain-part-4-1-bitcoin-proof-of-work-difficulty-explained/)
-    -   [_Part 4.2 — Ethereum Proof of Work Difficulty Explained_](https://bigishdata.com/2017/11/21/how-to-build-your-own-blockchain-part-4-2-ethereum-proof-of-work-difficulty-explained/)
--   [**Ruby**: _lets-build-a-blockchain_](https://github.com/Haseeb-Qureshi/lets-build-a-blockchain)
--   [**Ruby**: _Programming Blockchains Step-by-Step (Manuscripts Book Edition)_](https://github.com/yukimotopress/programming-blockchains-step-by-step)
--   [**Scala**: _How to build a simple actor-based blockchain_](https://medium.freecodecamp.org/how-to-build-a-simple-actor-based-blockchain-aac1e996c177)
--   [**TypeScript**: _Naivecoin: a tutorial for building a cryptocurrency_](https://lhartikk.github.io/)
-    -   [_Minimal working blockchain_](https://lhartikk.github.io/jekyll/update/2017/07/14/chapter1.html)
-    -   [_Proof of Work_](https://lhartikk.github.io/jekyll/update/2017/07/13/chapter2.html)
-    -   [_Transactions_](https://lhartikk.github.io/jekyll/update/2017/07/12/chapter3.html)
-    -   [_Wallet_](https://lhartikk.github.io/jekyll/update/2017/07/11/chapter4.html)
-    -   [_Transaction relaying_](https://lhartikk.github.io/jekyll/update/2017/07/10/chapter5.html)
-    -   [_Wallet UI and blockchain explorer_](https://lhartikk.github.io/jekyll/update/2017/07/09/chapter6.html)
--   [**TypeScript**: _NaivecoinStake: a tutorial for building a cryptocurrency with the Proof of Stake consensus_](https://naivecoinstake.learn.uno/)
-- [Explore Blockchain OSS, libraries, packages, source code, cloud functions and APIs](https://kandi.openweaver.com/explore/blockchain) 
-
----
 ## Projects and Applications
 [<img src="https://raw.githubusercontent.com/jpmorganchase/quorum/master/logo.png" align="right" width="80">](https://github.com/jpmorganchase/quorum)  
 ### Quorum
@@ -451,7 +97,7 @@ Key enhancements over go-ethereum:
 
 + [**How to get started**](https://github.com/monero-project/monero#compiling-monero-from-source)
 + [**Roadmap**](https://www.getmonero.org/resources/roadmap/)
-+ [**What is Monero? Most Comprehensive Guide**](https://blockgeeks.com/guides/monero/) / [Chinese version](https://github.com/liuchengxu/blockchain-tutorial/blob/master/content/monero/what-is-monero.md)
++ [**What is Monero? Most Comprehensive Guide**](https://blockgeeks.com/guides/monero/)
 + [**More resouces**](./Extension/monero.md)
 
 
@@ -465,7 +111,7 @@ Key enhancements over go-ethereum:
 **IOTA** is the missing puzzle piece for **the Machine Economy** to fully emerge and reach its desired potential. We envision IOTA to be the public, permissionless backbone for the Internet of Things that enables true interoperability between all devices.
 
 -   [IOTA](https://iota.org) - Next Generation Blockchain
--   [Whitepaper](https://iota.org/IOTA_Whitepaper.pdf) - The Tangle / [Chinese version](http://www.iotachina.com/wp-content/uploads/2016/11/2016112902003453.pdf)
+-   [Whitepaper](https://iota.org/IOTA_Whitepaper.pdf) - The Tangle
 -   [Wikipedia](https://en.wikipedia.org/wiki/IOTA_(Distributed_Ledger_Technology))
 -   [A Primer on IOTA](https://blog.iota.org/a-primer-on-iota-with-presentation-e0a6eb2cc621) - A Primer on IOTA (with Presentation)
 -   [IOTA China](http://iotachina.com/) - IOTA China 首页
@@ -477,7 +123,7 @@ Key enhancements over go-ethereum:
 
 +   [**How to get started**](https://github.com/iotaledger/iri#how-to-get-started)   
 +   [**Roadmap**](https://www.iota.org/research/roadmap)
-+   [**IOTA Transactions, Confirmation and Consensus**](https://github.com/noneymous/iota-consensus-presentation) / [Chinese version](https://github.com/liuchengxu/blockchain-tutorial/blob/master/content/iota/iota_consensus_v1.0.md)
++   [**IOTA Transactions, Confirmation and Consensus**](https://github.com/noneymous/iota-consensus-presentation)
 +   [**More resouces**](./Extension/iota.md)  
 
 
@@ -505,7 +151,7 @@ Key enhancements over go-ethereum:
 
 **IPFS** is becoming a new major subsystem of the internet. If built right, it could complement or replace HTTP. It could complement or replace even more. It sounds crazy. It _is_ crazy.
 
-- [White Paper](https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf) - Academic papers on IPFS / [Chinese version](https://gguoss.github.io/2017/05/28/ipfs/)
+- [White Paper](https://github.com/ipfs/papers/raw/master/ipfs-cap2pfs/ipfs-p2p-file-system.pdf) - Academic papers on IPFS
 - [Specs](https://github.com/ipfs/specs) - Specifications on the IPFS protocol
 - [Notes](https://github.com/ipfs/notes) - Various relevant notes and discussions (that do not fit elsewhere)
 [<img src="https://camo.githubusercontent.com/651f7045071c78042fec7f5b9f015e12589af6d5/68747470733a2f2f697066732e696f2f697066732f516d514a363850464d4464417367435a76413155567a7a6e3138617356636637485676434467706a695343417365" align="right" width="200">](https://github.com/ipfs)  
@@ -518,16 +164,16 @@ Key enhancements over go-ethereum:
 + [**More resouces**](./Extension/ipfs.md)  
 
 #### [Filecoin](https://filecoin.io/)
-- [White paper](https://filecoin.io/filecoin.pdf) / [Chinese version](http://chainx.org/paper/index/index/id/13.html)
+- [White paper](https://filecoin.io/filecoin.pdf)
 
 #### [Polybase](https://polybase.xyz)
 - [White paper](https://framerusercontent.com/modules/assets/GRv4t0d6jQOJbIO7ZOFgonnXqM~f7GLGr1YpwfK85uVr8su7Mxe_3b6VkIZW94sRev8jj4.pdf) / [Docs](https://github.com/polybase/docs)
 
 #### [BigchainDB](https://www.bigchaindb.com/)
-- [White paper](https://www.bigchaindb.com/whitepaper) / [Chinese version](http://blog.csdn.net/fengqing79/article/details/70154076)
+- [White paper](https://www.bigchaindb.com/whitepaper)
 
 ### BitShares
-- [White paper]() / [Chinese version](https://www.8btc.com/article/3369)
+- [White paper]()
 
 ### ArcBlock
 - [Blockchain Developer Platform](https://www.arcblock.io) / [White Paper](https://www.arcblock.io/en/whitepaper/latest)
@@ -542,9 +188,6 @@ Key enhancements over go-ethereum:
 
 ### Books
 
--   [**Blockchain guide**](https://yeasy.gitbooks.io/blockchain_guide/content/) by Baohua Yang, 2017 --
-    Introduce blockchain related technologies, from theory to practice with bitcoin, ethereum and hyperledger.
-    <!-- -   [区块链原理、设计与应用](https://github.com/yjjnls/books/blob/master/block%20chain/%E5%8C%BA%E5%9D%97%E9%93%BE%E5%8E%9F%E7%90%86%E3%80%81%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BA%94%E7%94%A8.pdf) -->
 -   [**Blockchain: from Digital Currency to Credit Society**](https://github.com/yjjnls/books/blob/master/block%20chain/%E5%8C%BA%E5%9D%97%E9%93%BE%20%E4%BB%8E%E6%95%B0%E5%AD%97%E8%B4%A7%E5%B8%81%E5%88%B0%E4%BF%A1%E7%94%A8%E7%A4%BE%E4%BC%9A.pdf)
 -   [**Attack of the 50 Foot Blockchain: Bitcoin, Blockchain, Ethereum & Smart Contracts**](https://davidgerard.co.uk/blockchain/table-of-contents/) by David Gerard, London, 2017 --
     _What is a bitcoin? ++
@@ -590,7 +233,7 @@ Key enhancements over go-ethereum:
 
 -   [**Programming Cryptocurrencies and Blockchains in Ruby ( Beta / Rough Draft )**](http://yukimotopress.github.io/blockchains)
     by Gerald Bauer et al, 2018 - FREE (Online Version) @ Yuki & Moto Press Bookshelf --
-    _Digital $$$ Alchemy - What's a Blockchain? -
+    _Digital Alchemy - What's a Blockchain? -
     How-To Turn Digital Bits Into $$$ or €€€? •
     Decentralize Payments. Decentralize Transactions. Decentralize Blockchains. •
     The Proof of the Pudding is ... The Bitcoin (BTC) Blockchain(s)
@@ -714,7 +357,7 @@ Key enhancements over go-ethereum:
 
 ##### Public Blockchain Identity
 
--   [Awesome Name Services](https://github.com/scio-labs/awesome-name-services/) – Awesome list curating all decentralized domain name services (DNS).
+-   [Handsome Name Services](https://github.com/scio-labs/awesome-name-services/) – Awesome list curating all decentralized domain name services (DNS).
 -   [Blockstack](https://blockstack.org) - Platform for decentralized, server-less apps where users control their data. Identity included.
 -   [Evernym](http://www.evernym.com) - Self-Sovereign identity built on top of open source permissioned blockchain.
 -   [Jolocom](https://jolocom.com) - Self-sovereing identity wallet.
@@ -791,8 +434,8 @@ Key enhancements over go-ethereum:
 
 Contributions welcome!
 
-1.  Fork it (<https://github.com/yjjnls/awesome-blockchain/fork>)
-2.  Clone it (`git clone https://github.com/yjjnls/awesome-blockchain`)
+1.  Fork it (<https://github.com/rust-solman/handsome-blockchain/fork>)
+2.  Clone it (`git clone https://github.com/yjjnls/handsome-blockchain`)
 3.  Create your feature branch (`git checkout -b your_branch_name`)
 4.  Commit your changes (`git commit -m 'Description of a commit'`)
 5.  Push to the branch (`git push origin your_branch_name`)
